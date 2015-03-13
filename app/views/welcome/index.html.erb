@@ -1,0 +1,8 @@
+<h1> Weather for <%= @wf.weather["location"]["city"] %>, <%= @wf.weather["location"]["state"] %> </h1>
+
+<% @forecast.each do |forecast| %>
+  <p><%= image_tag forecast["icon_url"] %></p>
+  <p><strong><%= forecast["title"] %></strong></p>
+  <p><%= forecast["fcttext"] %></p>
+  <br />
+<% end %>
